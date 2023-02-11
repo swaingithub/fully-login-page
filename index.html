@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        body {
+            background-color: #383838;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-image: url('assets/images/bg.jpg');
+        }
+
+        .inner { padding: 80px 20px; }
+
+        div#container {
+            width: 100%;
+            min-height: 100vh;
+            background-color: rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div#container section {
+            display: flex;
+            justify-content: space-between;
+            width: 85%;
+            max-width: 960px;
+            margin: 30px 0;
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 30px;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            text-align: center;
+            box-shadow: 0 2px 5px 0 #454545;
+        }
+
+        div#container section article {
+            width: 45%;
+            background-color: #f5d400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div#container section article h1 {
+            font-size: 60px;
+            font-weight: 700;
+            color: #000;
+        }
+
+        div#container section article p {
+            font-size: 20px;
+            color: #000;
+            margin-top: 10px;
+        }
+
+        div#container section article a.btn {
+            display: inline-block;
+            padding: 10px 30px;
+            border: #000 solid 2px;
+            border-radius: 25px;
+            font-size: 18px;
+            text-decoration: none;
+            margin-top: 30px;
+            font-weight: 600;
+            color: #000;
+            transition: 0.2s all ease;
+        }
+
+        div#container section article a.btn:hover {
+            background-color: #000;
+            color: #f5d400;
+        }
+
+        div#container section aside {
+            width: 55%;
+
+        }
+
+        div#container section aside h2 {
+            font-size: 40px;
+            color: #282828;
+            font-weight: 700;
+        }
+
+        div#container section aside p {
+            font-size: 20px;
+            color: #282828;
+        }
+
+        nav#socialLogin {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+        }
+
+        nav#socialLogin a {
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            margin: 0 10px;
+            border-radius: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 60%;
+            box-shadow: 0 2px 5px 0 #454545;
+        }
+
+        nav#socialLogin a.twitter { background-image: url('assets/icons/google.svg'); }
+        nav#socialLogin a.facebook {
+            background-image: url('assets/icons/github.svg');
+            background-size: 70%;
+        }
+        nav#socialLogin a.linkedin {
+            background-image: url('assets/icons/linkedin.svg');
+            background-size: 45%;
+        }
+
+        form {
+            width: 90%;
+            max-width: 350px;
+            margin: 30px auto 0 auto;
+        }
+
+        form input[type=text],
+        form input[type=email],
+        form input[type=password] {
+            width: calc(100% - 55px);
+            border: none;
+            padding: 10px 15px 8px 40px;
+            margin: 8px 0;
+            font-size: 18px;
+            border-radius: 20px;
+            background-position: 4% 50%;
+            background-repeat: no-repeat;
+            background-size: 18px;
+        }
+
+        form input[type=text] { background-image: url('assets/icons/user.svg'); }
+
+        form input[type=email] { background-image: url('assets/icons/email.svg'); }
+
+        form input[type=password] { background-image: url('assets/icons/password.svg'); }
+
+        form button[type=submit] {
+            margin-top: 20px;
+            border: none;
+            background-color: #f5d400;
+            color: #000;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 10px 30px;
+            border-radius: 25px;
+            transition: 0.2s all ease;
+            box-shadow: 0 2px 5px 0 #454545;
+        }
+
+        form button[type=submit]:hover {
+            background-color: #000;
+            color: #f5d400;
+        }
+
+        @media(max-width: 760px)  {
+            div#container section {
+                flex-flow: column;
+            }
+
+            div#container section article,
+            div#container section aside {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <section>
+            <article>
+                <div class="inner">
+                    <h1>Welcome</h1>
+                    <p>To Keep connected with us please Login with your credentials</p>
+                    <a href="" class="btn">Sign In</a>
+                </div>
+            </article>
+            <aside>
+                <div class="inner">
+                    <h2>Create Account</h2>
+                    <nav id="socialLogin">
+                        <!-- <a href="" class="google"></a>
+                        <a href="" class="github"></a>
+                        <a href="" class="linkedin"></a> -->
+                       <a class="twitter" href="#"><i class="fa-brands fa-twitter"></i></a>
+                       <a class="facebook" href="#"><i class="fa-brands fa-facebook"></i></a>
+                       <a class="linkedin" href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </nav>
+                    <p>or use your email for Registration</p>
+                    <form action="" method="post">
+                        <input type="text" placeholder="Full Name" />
+                        <input type="email" placeholder="Email" />
+                        <input type="password" placeholder="Password" />
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </aside>
+        </section>
+    </div>
+</body>
+</html>
